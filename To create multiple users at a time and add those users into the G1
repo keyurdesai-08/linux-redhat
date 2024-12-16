@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Ensure group G1 exists
+sudo groupadd -f G1
+
+# Create users u1 to u10 and add them to G1
+for i in {1..10}; do
+    sudo useradd -m -G G1 "u$i" 2>/dev/null || echo "User u$i already exists"
+    echo "Added u$i to the group G1"
+done
