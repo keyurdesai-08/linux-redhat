@@ -1,0 +1,33 @@
+linux redhat basic command 
+
+1) ls =  list the content the present working directory 
+
+2) cd =  change Directory 
+
+3) pwd = present working directory, t0 check in which file we are in.
+
+4) cd /directory name  = If we want to change directory 
+
+5) Date = To check date 
+
+6) cal = To open callender 
+
+6) cal 2024 = T0 check a specific year callender here instead of 2024 you can write any year of which year you have to see 
+
+7) ifconfig = to check ip in Linux
+
+8) ls -l  to check all data time size and length
+
+9) ls -lh = to check size which is human readable
+
+10) ls -lt = sort by ascending order 
+
+11) ls -ltr = sort by descending order | reverse 
+
+12) ls -la = Only diff we can see is "."= current hidden parent directory or a file 
+                                     ".." = current hidden child directory or a file
+
+13) ls -lA  It will not print any hidden parent or child directory or a file. but it can show a same content as la. means a list of present working directory.
+
+
+
