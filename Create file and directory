@@ -1,0 +1,34 @@
+To Create a File and Directory 
+---------------------------------------------------------------------------------------------------
+
+CREATE A FILE 
+
+1) touch F1.txt = To create a file 
+
+Note = Linux os editors there are many editor like vi , vim, gedit, emac and nano
+       but we mostly use vi for that 
+
+2) vi F1.txt = To open the editor vi 
+
+3) cat F1.txt = To fetch the data or content written into file.
+
+Step to create a file 
+
+Step 1 = Create a file using F1.txt 
+Step 2 = Now edit a file using a command vi ===> vi F1.txt
+Step 3 = Press i button to insert something and start writing a content in it 
+Step 4 = To save file press esc 
+Step 5 = To exit press (Shift :wq!)
+Step 6 = To fetch the data or content which is written into file
+         use the command ===> cat F1.txt. to see a content without opening it 
+
+CREATE DIRECTORY (Folder) 
+
+1) mkdir folder = To create a folder 
+whereas: 
+       mk - make 
+       dir - directory 
+
+2) mkdir -p /folder1/folder2 = To create a folder in folder 
+
+
