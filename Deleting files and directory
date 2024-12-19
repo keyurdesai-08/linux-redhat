@@ -1,0 +1,19 @@
+REMOVING FILE
+
+1) rm f1.txt = to remove file empty file 
+
+2) rm -r f1.txt = If you want to remove or delete a file along with its content
+
+3) rm -rf f1.txt = If you want to remove or delete a file along with its content or maybe an empty file
+
+
+REMOVING Directory 
+
+rm folder1 - to remove empty folder 
+
+rm -r folder1 - to remove the directory in which there is a folder in the folder 
+
+rm -rf folder1 - to remove a directory along with recursive force 
+
+
+note = we can not remove the directory forcefully we have to apply recursive force.
