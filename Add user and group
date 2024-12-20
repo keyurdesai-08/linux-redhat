@@ -1,0 +1,36 @@
+Managing local users and group 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* To create a user and group we have two command 
+
+1) useradd u1 ==> to add user 1 
+whereas : 
+         U1 means user1 
+         
+2) adduser u2  = to add user 2 
+
+Note =  To add a second user we did not create directly useradd U2 we have to make by command adduser u2
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* To set a password for the respective user 
+
+3) passwd u1 ==> to create a password 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* To fetch or see the complete user information 
+
+4) vi /etc passwd ==> This command will show all existing and new user details. 4
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* To fetch or to see user password information 
+
+5) vi /etc/shadow ==> This command will show all existing and new users password details 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* To create a group 
+
+6) ==> groupadd G1 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* To fetch or see the complete information about the group  (secondary group) 
+
+7) ===> vi /etc/group
