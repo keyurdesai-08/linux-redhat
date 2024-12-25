@@ -1,0 +1,98 @@
+To add multiple user into a single group 
+
+===>  method 1 : 
+
+      command usermod -a -G G1 u1
+      command usermod -a -G G1 u2
+      command usermod -a -G G1 u3
+      command usermod -a -G G1 u4 
+------------------------------------------------------------------------------------------------
+  
+      method 2 : 
+
+      command gpasswd -M u1,u2 G1
+      command gpasswd -M u3,u4 G1
+
+------------------------------------------------------------------------------------------------
+      method 3 : 
+
+      shell scripting programming language (BASH) shell
+
+
+      step 1 : touch user.sh
+      step 2 : vi user.sh 
+      step 3 : 
+      #!/bin/bash
+      for user in u1 u2 u3 u4; do
+             sudo usermod -a -G G1 $user
+             echo "Added $user to the group G1"
+      done
+      step 4 : chmod 777 user.sh 
+      step 5 : ./user.sh
+
+-----------------------------------------------------------------------------------------------
+     method 4 : 
+   
+     step 1 : touch user_list.txt
+   
+     step 2 : vi user_list
+  
+       u1 
+    
+       u2
+
+       u3 
+  
+       u4 
+
+       u5 
+ 
+       u6 
+  
+       u6 
+  
+       u7 
+ 
+       u8 
+ 
+       u9 
+   
+       u10 
+
+   
+      step 3 : Esc:wq!
+
+      step 4 : touch user.sh  
+ 
+      step 5 : vi user.sh
+
+               #!/bin/bash
+
+ 
+               if[[ !-f user_list.txt ]];then
+                     echo"User list file not found!" 
+                     exit
+               fi 
+
+
+               while read-r user; do
+ 
+                       sudo usermod-a-G G1 $user
+                       echo "Added $user to the group G1" 
+               done<user_list.txt
+
+    step 6 : chmod 777 userM.sh
+
+
+    step 7: ./userM.sh
+--------------------------------------------------------------------------------------------------------------------------------------     
+   method 5 
+   
+   #!/bin/bash
+   for i in {1..10};do 
+        user="u$i"
+        sudo usermod -a-G G1 $user
+        echo "Added $user to the group G1"
+   done 
+
+--------------------------------------------------------------------------------------------------------------------------------------
