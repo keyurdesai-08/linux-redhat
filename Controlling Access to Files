@@ -1,0 +1,121 @@
+                                                                        Controlling Access to Files
+
+A] Simple Permission: 
+ The permission that are given by adding a read (r), write (w), and execute (x) is called a simple permission 
+In it a Read means = 4 
+           Write means = 2
+           Execute = 1 
+           Other = o  =  0  
+
+Step 1:
+Owner / User: rwx
+Group: rw-
+Others: r—
+whereas,
+- Represents nothing means in digit form it is   showing as 0.
+
+Step 2: Convert characters into digits:
+Values: r=4, w=2 and x=1
+i.e., rwx = 4+2+1 = 7
+rw = 4+2+0 = 6
+r-- = 4+0+0 = 4
+Hence the whole digit form is 764
+
+Step 3: Now to set the above permission in the given format as
+below
+Command: chmod 764 file1.txt / college
+
+
+===============================================================================================================================================================================================
+
+
+B] To change the permission using the characters only. instead of using or converting into them in digit formats:
+ In this, we can use only characters to change the permission we cannot use a number in it. 
+
+chmod u+rwx, g+rwx, o+rwx file.txt
+chmod u+rwx
+chmod g+rwx
+chmod o+rwx
+
+In this u means users Ownership
+g means group Ownership
+o means other Ownership
+
+
+Practical based on the above:
+Example1: To set the permission rwx to the owner/user.
+	Command: chmod u+rwx college
+Example 2: To set permission rw- to the Group.
+	Command: chmod g+rw-x college
+Example 3: To set permission -wx to the others.
+	Command: chmod o+r-w-x college
+
+Notes = the permission which we can give write a + infornt off this and which we do not have to give write a – in front of that 
+
+
+===============================================================================================================================================================================================
+
+
+
+C] To change the ownership name of the User and Group:
+  If you want to change the User/Owner ownership username 
+	Command = chown u2 f2.txt
+	Whereas,
+		ch =Change
+		own = Ownership
+If you want to change the Group ownership username
+	Command = chgrp u3 f2.txt 
+	Whereas,
+		ch = Change
+		grp = Group Ownership
+
+
+===============================================================================================================================================================================================
+
+
+D] Special Permissions:
+
+1) User/Owner Ownership special permission 
+	   Set User ID (SUID) = u+s
+2) Group Ownership special permission 
+	   Set Group ID (GUID) = g+s
+3) Other Ownership special permission 
+	   Sticky Bit  = o+t 
+
+	rwx r-x --x
+	rws	 r-s --t
+
+
+
+===============================================================================================================================================================================================
+
+
+
+E] Default Permissions using umask: IMP
+
+
+What is umask?
+
+1) umask stands for User File Creation Mode.
+2) It is a Linux command that lets you set up default permissions for newly created file and directories (Folder)
+3) umask is having a default value called 022 or 0022
+
+
+Difference between chmod and umask 
+
+1) with the help of chmod you can change the permission of existing files/directories and also
+you can change the permission of new file/directory.
+	touch f1.txt
+	rw-	r--	r--
+	chmod 777 f1.txt
+	rwx	rwx	rwx
+	
+2) But, with the help of umask you can change the permission of only new file/directory and not the 
+existing file/directory
+	
+	umask 543 
+	touch f1.txt 
+	r-x	r--	-wx
+
+ 
+
