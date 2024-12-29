@@ -1,0 +1,23 @@
+                                                                        User Entry 
+
+getent passwd u50 
+Whereas,
+	get = Get
+	ent = Entry 
+	passwd = That is a file in which the users information is stored
+	u50 = Name of the respective user
+
+If you want to set or modify the comment or description of a particular
+user use the below command:
+Command = usermod -c "Test User u50" u50 
+
+If you want to create a new directory in the home and a new user in it use the command 
+
+Command == useradd -d /home/Dir2/u53 u53
+
+
+If you want to lock any user use the below command
+Command = usermod -L u50
+
+If you want to un-lock the user which you have locked use the below command
+Command = usermod -U u50
