@@ -6,7 +6,7 @@ Managing local users and group
 whereas : 
          U1 means user1 
          
-2) adduser u2  = to add user 2 
+2) adduser u2  = to add user 2
 
 Note =  To add a second user we did not create directly useradd U2 we have to make by command adduser u2
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
