@@ -1,0 +1,63 @@
+Scheduling a Cron Job
+----------------------------------------------------------------------------
+Executed automatically at specified times or intervals.
+
+Chronos - Greek word -cron = Time
+Task manage - Cron Daemon Process 
+Table - Crontab 
+
+touch f1.txt
+
+crontab -e
+whereas,
+	e = edit 
+----------------------------------------------------------------------------
+
+ C1      C2        C3             C4      C5                                             C6
+Minute	Hour	DayofMonth	Month	DayofWeek					Path
+(0-59)  (0-23)    (1-31)        (1-12)  (0-7) OR (sun,mon,tue,wed,thu,fri,sat)		/root/f1.txt
+
+Special characters:
+* = Represents "every" value (Eg, every minute, hours, etc) 
+, = Separates multiple values (Eg, 5,10,15) 
+- = Represents a range (Eg 1-5 means Monday to Friday)
+/ = Represents step values (Eg, */5 means every 5 units) 
+
+
+
+Example 1 = Run a script ever day at 3:00 AM
+===>
+Step 1: touch f1.sh
+
+Step 2: vi f1.sh
+	#!/bin/bash
+	echo "Each emp please note that every 3 AM there will be a back up of your system."
+	
+Step 3: Esc:wq!
+Step 4: crontab -e 
+
+	  C1      C2        C3             C4      C5                   C6
+	Minute	 Hour	DayofMonth	Month	DayofWeek		Path
+	   0      3        *               *        *                    /f1.sh 
+
+Step 5: crontab -l 
+Note = List the content which is written in to that crontab table 
+
+
+Example 2 = Run a script / command every Monday at 5:00 PM
+===>
+Step 4: crontab -e 
+
+	  C1      C2        C3             C4      C5                   C6
+	Minute	 Hour	DayofMonth	Month	DayofWeek		Path
+	  0       17	   *             *         mon                   /f1.sh 
+
+
+
+Example 3 = Run a job every 10 minutes
+===>
+Step 4: crontab -e 
+
+	  C1      C2        C3             C4      C5                   C6
+	Minute	 Hour	DayofMonth	Month	DayofWeek		Path
+	  */10    *	    *		  *	   * 			/f1.sh 
